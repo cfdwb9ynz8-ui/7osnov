@@ -305,8 +305,9 @@ figcaption { margin-top: 10px; font-size: 14px; color: var(--ink-soft); }
 @media (max-width: 420px) { .about__team { grid-template-columns: 1fr; } }
 
 /* Логотип компании */
-.logo__img { display: block; height: 60px; width: auto; filter: brightness(1.12) contrast(1.6); mix-blend-mode: multiply; }
-.logo--light .logo__img { height: 84px; filter: brightness(1.12) contrast(1.6) invert(1); mix-blend-mode: screen; }
+/* У logo.png прозрачный фон: чёрный знак на светлой шапке, в тёмном подвале — инвертирован в белый */
+.logo__img { display: block; height: 60px; width: auto; }
+.logo--light .logo__img { height: 84px; filter: invert(1); }
 @media (max-width: 560px) { .header .logo__img { height: 52px; } }
 
 /* Hero: дом «строится» на фоновом фото — снизу вверх, от фундамента к кровле */
